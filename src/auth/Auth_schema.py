@@ -1,3 +1,5 @@
+import time
+
 class Person : 
     '''
     Class person tuh buat nampung data akun, soalnya dari 3 role 
@@ -7,33 +9,68 @@ class Person :
     
     nanti penyimpanan data user di json nya pake nested dict => 
     {
-        "id" : {
-            
-        }
-    }
+        id : {
+            username : Account.username,
+            email : Account.email,
+            password : Account.password,
+            role : Account.role
+        },
+    
+    Kalo mau ganti bilang aja, soalnya ini notasi o nya O(1)
+    id nya itu PERSON-<waktu bikin akun dalam milidetik> biar unik tiap id nya
     '''
-    jumlah_user = 0 #ini nanti dipake buat generate id PERSON-(waktu akun dibuat)-(jumlah user)
     
     def __init__(self, nama:str, username:str, email:str, password:str, role:str):
+        self.id:str = f"PERSON-{int(time.time()*1000)}"
         self.name:str = nama
         self.username:str = username
         self.email:str = email
         self.password:str = password
+        self.role =role
     
     
     #SETTER UNTUK DATA PERSON (BUAT UBAH DATA EMAIL, PW, NAMA DLL, TAPI 
     # GABISA UBAH ROLE)
     
-    def changeName(self, newName:str) -> str :
-        if self.name != newName :
-            self.name = newName
-            return f"Berhasil merubah nama menjadi {self.name}"
+    def _changeAtrribute(self, attributeName:str, newValue:str) -> bool :
+        #isSameData tuh dia ngecek apakah value yg dimasukin sama
+        #kayak data lama? kalo iya value nya gajadi diganti
+        isNotSameData = (getattr(self, attributeName) != newValue)
         
-        return f"Nama tidak boleh sama!"
+        if isNotSameData: 
+            setattr(self, attributeName, newValue)
+            print(f"{attributeName} berhasil diubah!")
+            return True
+        
+        print(f"{attributeName} tidak boleh sama!")
+        return False
     
-    def changeUsername(self, newUsername:str) -> str :
-        if self.username != newUsername :
-            self.username = newUsername
-            return f"Berhasil merubah username menjadi {self.name}"
+    def changeName(self, newName:str) :
+        return self._changeAtrribute("name", newName)
         
-        return f"Username tidak boleh sama!"
+    def changeUsername(self, newUsername:str) :
+        return self._changeAtrribute("username", newUsername)
+        
+    def changePassword(self, newPassword:str) :
+        return self._changeAtrribute("password", newPassword)
+        
+    def changeEmail(self, newEmail:str) :
+        return self._changeAtrribute("email", newEmail)
+    
+    def getData(self) -> dict[str:str] :
+        return {"id" : self.id,
+                "username" : self.username,
+                "nama" : self.name,
+                "email" : self.email,
+                "role" : self.role
+                }
+
+person1 = Person("elaina", "adminElaina", "Elaina@gmail.com", "pw123", "admin")
+
+print(person1.getData())
+
+person1.changeEmail("emailbaru")
+
+person1.changeUsername("elainaImut")
+
+print(person1.getData())
