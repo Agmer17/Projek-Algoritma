@@ -64,13 +64,6 @@ class Person :
                 "email" : self.email,
                 "role" : self.role
                 }
-
-person1 = Person("elaina", "adminElaina", "Elaina@gmail.com", "pw123", "admin")
-
-print(person1.getData())
-
-person1.changeEmail("emailbaru")
-
-person1.changeUsername("elainaImut")
-
-print(person1.getData())
+        
+        
+        
