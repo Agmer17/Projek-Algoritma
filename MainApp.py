@@ -1,6 +1,4 @@
-from src import admin
-
-admin.Controller.testing() 
+from src import admin 
 # nanti cara make modul nya gini 
 # <nama_modul/folder>.<controller/schema>.<nama_fungsi>
 
