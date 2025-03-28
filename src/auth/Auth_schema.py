@@ -1,3 +1,6 @@
+import time
+import json
+
 class Person : 
     '''
     Class person tuh buat nampung data akun, soalnya dari 3 role 
@@ -18,11 +21,13 @@ class Person :
     '''
     
     def __init__(self, nama:str, username:str, email:str, password:str, role:str):
+        self.id = f"USER-{int(time.time()*1000)}"
         self.name:str = nama
         self.username:str = username
         self.email:str = email
         self.password:str = password
         self.role =role
+        
     
     
     #SETTER UNTUK DATA PERSON (BUAT UBAH DATA EMAIL, PW, NAMA DLL, TAPI 
@@ -63,6 +68,24 @@ class Person :
 class PersonManager : 
     '''
     ini rencananya buat nampung data user soalnya kan struktur datanya sama
+    Bisa search, hapus, nambah sama ngurutin datanya.
+    
     '''
-    def __init__(self):
-        pass
+    
+    @staticmethod
+    def loadFile(path:str) -> dict[str:str] :
+        '''static method buat load file dari path yang dikasih
+        nanti path nya itu berupa absolute path biar gak error'''
+        data = None
+        try :
+            with open(path, "r", encoding="utf-8") as files:
+                data = json.load(files)
+                return data
+        except :
+            print("Error saat membaca file! harap perisa path nya!")
+            return {}
+            
+    
+    def __init__(self, path:str):
+        self.items = self.loadFile(path)
+
