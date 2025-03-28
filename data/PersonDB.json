@@ -1,52 +1,62 @@
 {
-    "john_doe": {
-        "email": "john.doe@example.com",
-        "password": "password123",
-        "role": "user"
-    },
-    "jane_smith": {
-        "email": "jane.smith@example.org",
-        "password": "securepass",
+    "user_admin_01": {
+        "nama": "Agus Setiawan",
+        "email": "agus.s@perusahaan.com",
+        "password": "admin123",
         "role": "admin"
     },
-    "peter_jones": {
-        "email": "peter.j@sample.net",
-        "password": "anotherpassword",
-        "role": "user"
+    "employee_007": {
+        "nama": "Citra Dewi",
+        "email": "citra.d@perusahaan.com",
+        "password": "employee456",
+        "role": "employee"
     },
-    "mary_williams": {
-        "email": "mary.w@test.info",
-        "password": "strongpassword",
-        "role": "editor"
+    "supplier_jaya": {
+        "nama": "PT. Jaya Makmur",
+        "email": "info@jayamakmur.co.id",
+        "password": "supplierjaya",
+        "role": "supplier"
     },
-    "david_brown": {
-        "email": "david.b@email.co",
-        "password": "mysecret",
-        "role": "user"
-    },
-    "susan_miller": {
-        "email": "susan.m@domain.com",
-        "password": "pass1234",
+    "admin_keuangan": {
+        "nama": "Bambang Irawan",
+        "email": "bambang.i@perusahaan.com",
+        "password": "keuanganadmin",
         "role": "admin"
     },
-    "kevin_davis": {
-        "email": "kevin.d@server.net",
-        "password": "secureme",
-        "role": "user"
+    "employee_gudang": {
+        "nama": "Sinta Lestari",
+        "email": "sinta.l@perusahaan.com",
+        "password": "gudangemployee",
+        "role": "employee"
     },
-    "linda_garcia": {
-        "email": "linda.g@website.org",
-        "password": "simplepass",
-        "role": "viewer"
+    "supplier_utama": {
+        "nama": "CV. Sumber Rezeki",
+        "email": "sales@sumberrezeki.com",
+        "password": "sumberrezeki",
+        "role": "supplier"
     },
-    "brian_rodriguez": {
-        "email": "brian.r@mail.net",
-        "password": "complexpass",
-        "role": "user"
-    },
-    "nancy_martinez": {
-        "email": "nancy.m@sample.com",
-        "password": "easy123",
+    "admin_pemasaran": {
+        "nama": "Dewi Anggraini",
+        "email": "dewi.a@perusahaan.com",
+        "password": "pemasaranadmin",
         "role": "admin"
+    },
+    "employee_produksi": {
+        "nama": "Faisal Rahman",
+        "email": "faisal.r@perusahaan.com",
+        "password": "produksiemployee",
+        "role": "employee"
+    },
+    "supplier_elektronik": {
+        "nama": "Toko Elektronik Maju",
+        "email": "order@tokomaju.id",
+        "password": "elektronikmaju",
+        "role": "supplier"
+    },
+    "employee_hrd": {
+        "nama": "Gina Putri",
+        "email": "gina.p@perusahaan.com",
+        "password": "hrdemployee",
+        "role": "employee"
     }
 }
