@@ -1,5 +1,3 @@
-import time
-
 class Person : 
     '''
     Class person tuh buat nampung data akun, soalnya dari 3 role 
@@ -7,21 +5,19 @@ class Person :
     . Nanti pas di schema nya tinggal inherit aja ya, trs tambahin 
     method / data lain yg diperluin.
     
-    nanti penyimpanan data user di json nya pake nested dict => 
+    nanti nyimpen data user di json nya pake nested dict => 
     {
-        id : {
-            username : Account.username,
+        username : {
             email : Account.email,
             password : Account.password,
             role : Account.role
         },
+    }
     
-    Kalo mau ganti bilang aja, soalnya ini notasi o nya O(1)
-    id nya itu PERSON-<waktu bikin akun dalam milidetik> biar unik tiap id nya
+    cmn gua gatau ide bagus apa engga wkwkwk
     '''
     
     def __init__(self, nama:str, username:str, email:str, password:str, role:str):
-        self.id:str = f"PERSON-{int(time.time()*1000)}"
         self.name:str = nama
         self.username:str = username
         self.email:str = email
@@ -58,12 +54,15 @@ class Person :
         return self._changeAtrribute("email", newEmail)
     
     def getData(self) -> dict[str:str] :
-        return {"id" : self.id,
-                "username" : self.username,
+        return {"username" : self.username,
                 "nama" : self.name,
                 "email" : self.email,
                 "role" : self.role
                 }
-        
-        
-        
+
+class PersonManager : 
+    '''
+    ini rencananya buat nampung data user soalnya kan struktur datanya sama
+    '''
+    def __init__(self):
+        pass
