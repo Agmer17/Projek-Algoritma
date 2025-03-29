@@ -1,6 +1,8 @@
 from . import PersonManager as Manage
 from src.Config import dataUser
 
+#todo perbagus auth section
+
 def login() :
     listUserData = Manage.PersonManager(dataUser)
     
@@ -15,10 +17,11 @@ def login() :
     
     if dataPengguna and dataPengguna.password == userInput.get("password"):
         print("Kamu berhasil login")
-        return True
+        return dataPengguna
         
     else : 
         print("username atau password salah")
+        return None
 
 def signIn() : 
     listUserData = Manage.PersonManager(dataUser)
@@ -35,9 +38,9 @@ def signIn() :
     listUserData.addData(userInput)
 
 def authSection() : 
-    isLoggedIn = False
+    isLoggedIn = None
     
-    while not isLoggedIn :
+    while isLoggedIn == None :
         userChoice = None 
         print("Halo! Silahkan Login/Sign in terlebih dahulu")
         print("1. Login\n2.Sign-in")
