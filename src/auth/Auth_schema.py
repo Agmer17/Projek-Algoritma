@@ -58,4 +58,12 @@ class Person :
                 "email" : self.email,
                 "role" : self.role
                 }
+    
+    def getFullData(self) -> dict[str:str] :
+        return {
+        "name": self.name,
+        "email": self.email,
+        "password": self.password,
+        "role": self.role
+    }
 

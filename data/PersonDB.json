@@ -64,5 +64,17 @@
         "email": "agmer.p@perusahaan.com",
         "password": "agmer",
         "role": "admin"
+    },
+    "hiura_imut": {
+        "name": "hiura",
+        "email": "hiura@gmail.com",
+        "password": "12345",
+        "role": "admin"
+    },
+    "elainaaja": {
+        "name": "elaina",
+        "email": "elaina@gmail.com",
+        "password": "12345",
+        "role": "admin"
     }
 }

@@ -51,14 +51,31 @@ class PersonManager :
         
         return data
     
-    
     def __init__(self, path:str):
         '''
         pas class di inisiasi data dari json otomatis diubah jadi objek class
         '''
-        data = self.loadFile(path)
+        self.path = path
+        data = self.loadFile(self.path)
         self.items = self.convertToClass(data)
         
+    
+    def changeData(self) : 
+        '''
+        method buat overwrite file lama, bisa dipake buat 
+        add data atau update data nanti
+        '''
+        listUserDummy = {}
+        
+        for data in self.items : 
+            listUserDummy.update({data : self.findUser(data).getFullData()})
+        
+        try : 
+            with open(self.path, mode="w") as files :
+                json.dump(listUserDummy, files, indent=4)
+            print("Data berhasil diubah!")
+        except Exception as e :
+            print(e)
     
     def findUser(self, username:str) -> object : 
         return self.items.get(username)
@@ -92,8 +109,8 @@ class PersonManager :
             
         elif role == "supplier" : 
             newUsers:Suppliers_schema.Supplier = Suppliers_schema.Supplier(**dataUser)
-            
             self.items.update({dataUser.get("username") : newUsers})
         
+        self.changeData()
         
 
