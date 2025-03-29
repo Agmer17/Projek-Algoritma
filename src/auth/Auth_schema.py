@@ -29,7 +29,32 @@ class Person :
         self.email:str = email
         self.password:str = password
         self.role =role
+
+    def _changeAtrribute(self, attributeName:str, newValue:str) -> bool :
+        #isSameData tuh dia ngecek apakah value yg dimasukin sama
+        #kayak data lama? kalo iya value nya gajadi diganti
+        isNotSameData = (getattr(self, attributeName) != newValue)
         
+        if isNotSameData: 
+            setattr(self, attributeName, newValue)
+            print(f"{attributeName} berhasil diubah!")
+            return True
+        
+        print(f"{attributeName} tidak boleh sama!")
+        return False
+    
+    def changeName(self, newName:str) :
+        return self._changeAtrribute("name", newName)
+        
+    def changeUsername(self, newUsername:str) :
+        return self._changeAtrribute("username", newUsername)
+        
+    def changePassword(self, newPassword:str) :
+        return self._changeAtrribute("password", newPassword)
+        
+    def changeEmail(self, newEmail:str) :
+        return self._changeAtrribute("email", newEmail)
+    
     def getData(self) -> dict[str:str] :
         return {"username" : self.username,
                 "nama" : self.name,
