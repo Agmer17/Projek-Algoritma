@@ -40,11 +40,14 @@ class PersonManager :
         data = {}
         
         for username, userData in listData.items() : 
-            role = userData.get("role")
+            role = userData.get("role").lower()
             if role == "admin":
                 data[username] = Admin_schema.Admin(username=username, **userData)
-            else : 
-                data[username] = Person(username=username, **userData)
+            if role == "employee":
+                data[username] = Employees_schema.Employee(username=username, **userData)
+            if role == "supplier":
+                data[username] = Suppliers_schema.Supplier(username=username, **userData)
+            
         
         return data
     
