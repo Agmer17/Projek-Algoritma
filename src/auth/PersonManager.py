@@ -73,7 +73,7 @@ class PersonManager :
         try : 
             with open(self.path, mode="w") as files :
                 json.dump(listUserDummy, files, indent=4)
-            print("Data berhasil diubah!")
+            print("Data berhasil diubah/ditambahkan!")
         except Exception as e :
             print(e)
     
@@ -94,23 +94,29 @@ class PersonManager :
         penentuan role bedasarkan key role dari parameter yg dikasih
         '''
         
-        newUsers:object = None
-        role:str = dataUser.get("role").lower()
-        
-        if role == "admin" :
-            newUsers:Admin_schema.Admin = Admin_schema.Admin(**dataUser)
+        if self.findUser(dataUser.get("username")) == None :
+            newUsers:object = None
+            role:str = dataUser.get("role").lower()
             
-            self.items.update({dataUser.get("username") : newUsers})
-        
-        elif role == "employee" : 
-            newUsers:Employees_schema.Employee = Employees_schema.Employee(**dataUser)
+            if role == "admin" :
+                newUsers:Admin_schema.Admin = Admin_schema.Admin(**dataUser)
+                
+                self.items.update({dataUser.get("username") : newUsers})
             
-            self.items.update({dataUser.get("username") : newUsers})
+            elif role == "employee" : 
+                newUsers:Employees_schema.Employee = Employees_schema.Employee(**dataUser)
+                
+                self.items.update({dataUser.get("username") : newUsers})
+                
+            elif role == "supplier" : 
+                newUsers:Suppliers_schema.Supplier = Suppliers_schema.Supplier(**dataUser)
+                self.items.update({dataUser.get("username") : newUsers})
             
-        elif role == "supplier" : 
-            newUsers:Suppliers_schema.Supplier = Suppliers_schema.Supplier(**dataUser)
-            self.items.update({dataUser.get("username") : newUsers})
+            self.changeData()
+            return True
         
-        self.changeData()
+        else : 
+            print("username telah terdaftar, harap masukan username lain")
+            return False
         
 

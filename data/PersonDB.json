@@ -1,80 +1,14 @@
 {
-    "user_admin_01": {
-        "name": "Agus Setiawan",
-        "email": "agus.s@perusahaan.com",
-        "password": "admin123",
-        "role": "admin"
-    },
-    "employee_007": {
-        "name": "Citra Dewi",
-        "email": "citra.d@perusahaan.com",
-        "password": "employee456",
-        "role": "employee"
-    },
-    "supplier_jaya": {
-        "name": "PT. Jaya Makmur",
-        "email": "info@jayamakmur.co.id",
-        "password": "supplierjaya",
-        "role": "supplier"
-    },
-    "admin_keuangan": {
-        "name": "Bambang Irawan",
-        "email": "bambang.i@perusahaan.com",
-        "password": "keuanganadmin",
-        "role": "admin"
-    },
-    "employee_gudang": {
-        "name": "Sinta Lestari",
-        "email": "sinta.l@perusahaan.com",
-        "password": "gudangemployee",
-        "role": "employee"
-    },
-    "supplier_utama": {
-        "name": "CV. Sumber Rezeki",
-        "email": "sales@sumberrezeki.com",
-        "password": "sumberrezeki",
-        "role": "supplier"
-    },
-    "admin_pemasaran": {
-        "name": "Dewi Anggraini",
-        "email": "dewi.a@perusahaan.com",
-        "password": "pemasaranadmin",
-        "role": "admin"
-    },
-    "employee_produksi": {
-        "name": "Faisal Rahman",
-        "email": "faisal.r@perusahaan.com",
-        "password": "produksiemployee",
-        "role": "employee"
-    },
-    "supplier_elektronik": {
-        "name": "Toko Elektronik Maju",
-        "email": "order@tokomaju.id",
-        "password": "elektronikmaju",
-        "role": "supplier"
-    },
-    "employee_hrd": {
-        "name": "Gina Putri",
-        "email": "gina.p@perusahaan.com",
-        "password": "hrdemployee",
-        "role": "employee"
-    },
-    "agmer": {
+    "agmer_admin": {
         "name": "agmer",
-        "email": "agmer.p@perusahaan.com",
-        "password": "agmer",
+        "email": "agmer@hotmail.com",
+        "password": "12345",
         "role": "admin"
     },
-    "hiura_imut": {
+    "hiuraAja": {
         "name": "hiura",
         "email": "hiura@gmail.com",
         "password": "12345",
-        "role": "admin"
-    },
-    "elainaaja": {
-        "name": "elaina",
-        "email": "elaina@gmail.com",
-        "password": "12345",
-        "role": "admin"
+        "role": "employee"
     }
 }

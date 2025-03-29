@@ -3,6 +3,6 @@ from src import admin, auth, categories, employees, items, reports, suppliers, t
 # <nama_modul/folder>.<controller/schema>.<nama_fungsi>
 
 #testing
-
+auth.controller.authSection()
 # Nanti kalo ad ayg mau benerin, benerin ae
 # gua masih bingung mau mulai bikin darimana

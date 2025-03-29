@@ -1,8 +1,8 @@
-from . import Auth_schema as Schema
+from . import PersonManager as Manage
 from src.Config import dataUser
 
 def login() :
-    listUserData = Schema.PersonManager(dataUser)
+    listUserData = Manage.PersonManager(dataUser)
     
     print("===LOGIN===")
     
@@ -15,9 +15,45 @@ def login() :
     
     if dataPengguna and dataPengguna.password == userInput.get("password"):
         print("Kamu berhasil login")
+        return True
         
     else : 
         print("username atau password salah")
 
 def signIn() : 
-    pass
+    listUserData = Manage.PersonManager(dataUser)
+    print("=== Sign In ===")
+    
+    userInput = {
+        "name" : input("Masukan nama : "),
+        "username" : input("Masukan username akun : "),
+        "email" : input("Masukan Email : "),
+        "password" : input("Masukan Password : "),
+        "role" : input("Masukan role : ")
+    }
+    
+    listUserData.addData(userInput)
+
+def authSection() : 
+    isLoggedIn = False
+    
+    while not isLoggedIn :
+        userChoice = None 
+        print("Halo! Silahkan Login/Sign in terlebih dahulu")
+        print("1. Login\n2.Sign-in")
+        userChoice = int(input("Masukan pilihan : "))
+        
+        try : 
+            if userChoice == 1 : 
+                isLoggedIn = login()
+                
+            elif userChoice == 2 : 
+                signIn()
+                
+            else : 
+                print("Pilihan tidak ada!")
+        except : 
+            print("Input tidak valid! Harap masukan angka 1/2")
+        
+        
+        
