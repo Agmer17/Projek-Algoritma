@@ -1,62 +1,68 @@
 {
     "user_admin_01": {
-        "nama": "Agus Setiawan",
+        "name": "Agus Setiawan",
         "email": "agus.s@perusahaan.com",
         "password": "admin123",
         "role": "admin"
     },
     "employee_007": {
-        "nama": "Citra Dewi",
+        "name": "Citra Dewi",
         "email": "citra.d@perusahaan.com",
         "password": "employee456",
         "role": "employee"
     },
     "supplier_jaya": {
-        "nama": "PT. Jaya Makmur",
+        "name": "PT. Jaya Makmur",
         "email": "info@jayamakmur.co.id",
         "password": "supplierjaya",
         "role": "supplier"
     },
     "admin_keuangan": {
-        "nama": "Bambang Irawan",
+        "name": "Bambang Irawan",
         "email": "bambang.i@perusahaan.com",
         "password": "keuanganadmin",
         "role": "admin"
     },
     "employee_gudang": {
-        "nama": "Sinta Lestari",
+        "name": "Sinta Lestari",
         "email": "sinta.l@perusahaan.com",
         "password": "gudangemployee",
         "role": "employee"
     },
     "supplier_utama": {
-        "nama": "CV. Sumber Rezeki",
+        "name": "CV. Sumber Rezeki",
         "email": "sales@sumberrezeki.com",
         "password": "sumberrezeki",
         "role": "supplier"
     },
     "admin_pemasaran": {
-        "nama": "Dewi Anggraini",
+        "name": "Dewi Anggraini",
         "email": "dewi.a@perusahaan.com",
         "password": "pemasaranadmin",
         "role": "admin"
     },
     "employee_produksi": {
-        "nama": "Faisal Rahman",
+        "name": "Faisal Rahman",
         "email": "faisal.r@perusahaan.com",
         "password": "produksiemployee",
         "role": "employee"
     },
     "supplier_elektronik": {
-        "nama": "Toko Elektronik Maju",
+        "name": "Toko Elektronik Maju",
         "email": "order@tokomaju.id",
         "password": "elektronikmaju",
         "role": "supplier"
     },
     "employee_hrd": {
-        "nama": "Gina Putri",
+        "name": "Gina Putri",
         "email": "gina.p@perusahaan.com",
         "password": "hrdemployee",
         "role": "employee"
+    },
+    "agmer": {
+        "name": "agmer",
+        "email": "agmer.p@perusahaan.com",
+        "password": "agmer",
+        "role": "admin"
     }
 }

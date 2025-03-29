@@ -1,7 +1,4 @@
 import time
-import json
-from src.admin import Admin_schema
-
 class Person : 
     '''
     Class person tuh buat nampung data akun, soalnya dari 3 role 
@@ -22,9 +19,9 @@ class Person :
     cmn gua gatau ide bagus apa engga wkwkwk
     '''
     
-    def __init__(self, nama:str, username:str, email:str, password:str, role:str):
+    def __init__(self, name:str, username:str, email:str, password:str, role:str):
         self.id = f"USER-{int(time.time()*1000)}"
-        self.name:str = nama
+        self.name:str = name
         self.username:str = username
         self.email:str = email
         self.password:str = password
@@ -61,60 +58,4 @@ class Person :
                 "email" : self.email,
                 "role" : self.role
                 }
-
-class PersonManager : 
-    '''
-    Person manager nih dipake buat nampung data dari semua class role yang ada (
-        admin,
-        employee,
-        suplier
-    ) 
-    
-    dalam bentuk dictionary. Contoh datanya : 
-    
-    {
-        username : ClassObject()
-    }
-    '''
-    
-    @staticmethod
-    def loadFile(path:str) -> dict[str:str] :
-        '''static method buat load file dari path yang dikasih
-        nanti path nya itu berupa absolute path biar gak error'''
-        data = None
-        try :
-            with open(path, "r", encoding="utf-8") as files:
-                data = json.load(files)
-                return data
-            
-        except Exception as e:
-            print("Error saat membaca file! harap perisa path nya! " + e)
-            return {}
-        
-        
-    @staticmethod
-    def convertToClass(listData) : 
-        data = {}
-        
-        for username, userData in listData.items() : 
-            role = userData.get("role")
-            if role == "admin":
-                data[username] = Admin_schema.Admin(username=username, **userData)
-            else : 
-                data[username] = Person(username=username, **userData)
-        
-        return data
-    
-    
-    def __init__(self, path:str):
-        '''
-        pas class di inisiasi data dari json otomatis diubah jadi objek class
-        '''
-        data = self.loadFile(path)
-        self.items = self.convertToClass(data)
-        
-    
-    
-            
-    
 
