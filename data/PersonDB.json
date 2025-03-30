@@ -10,5 +10,17 @@
         "email": "hiura@gmail.com",
         "password": "12345",
         "role": "employee"
+    },
+    "karyawan1": {
+        "name": "karyawan",
+        "email": "employee@gmail.com",
+        "password": "12345",
+        "role": "employee"
+    },
+    "supplier1": {
+        "name": "supplier",
+        "email": "supplier1@gmail.com",
+        "password": "12345",
+        "role": "supplier"
     }
 }

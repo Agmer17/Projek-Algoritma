@@ -36,7 +36,17 @@ class PersonManager :
         
         
     @staticmethod
-    def convertToClass(listData:dict[str:dict]) -> dict[str:object] : 
+    def convertToClass(listData:dict[str:dict]) -> dict[str:object] :
+        '''
+        Static method buat convert data dari json yang berupa -> 
+        
+        value : {dict}
+        
+        jadi -> 
+        
+        value : Object
+        
+        ''' 
         data = {}
         
         for username, userData in listData.items() : 
@@ -112,11 +122,31 @@ class PersonManager :
                 newUsers:Suppliers_schema.Supplier = Suppliers_schema.Supplier(**dataUser)
                 self.items.update({dataUser.get("username") : newUsers})
             
+            else : 
+                print("role gak valid!")
+                return False
+            
             self.changeData()
             return True
         
         else : 
             print("username telah terdaftar, harap masukan username lain")
             return False
+    
+    def deleteData(self, username:str) -> None:
+        '''
+        method buat menghapus data bedasarkan username.
         
+        Args : 
+            username(str) -> Username dari pengguna yang mau dihapus
+        
+        Execption : 
+            jika pengguna gak ditemukan, exception akan menangkap error 
+            berupa KeyError
+        '''
+        try :
+            self.items.pop(username)
+            self.changeData()
+        except Exception as e:
+            print(f"Data username tidak ditemukan : {e}")
 

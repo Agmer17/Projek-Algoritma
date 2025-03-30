@@ -3,8 +3,8 @@ from src.Config import dataUser
 
 #todo perbagus auth section
 
-def login() :
-    listUserData = Manage.PersonManager(dataUser)
+def login(listData:Manage.PersonManager) :
+    listUserData = listData
     
     print("===LOGIN===")
     
@@ -23,8 +23,8 @@ def login() :
         print("username atau password salah")
         return None
 
-def signIn() : 
-    listUserData = Manage.PersonManager(dataUser)
+def signIn(listData:Manage.PersonManager) : 
+    listUserData = listData
     print("=== Sign In ===")
     
     userInput = {
@@ -37,21 +37,21 @@ def signIn() :
     
     listUserData.addData(userInput)
 
-def authSection() : 
+def authSection(listData:Manage.PersonManager) : 
+    listUser = listData
     isLoggedIn = None
     
     while isLoggedIn == None :
         userChoice = None 
         print("Halo! Silahkan Login/Sign in terlebih dahulu")
         print("1. Login\n2.Sign-in")
-        userChoice = int(input("Masukan pilihan : "))
-        
-        try : 
+        try :
+            userChoice = int(input("Masukan pilihan : "))
             if userChoice == 1 : 
-                isLoggedIn = login()
+                isLoggedIn = login(listData)
                 
             elif userChoice == 2 : 
-                signIn()
+                signIn(listData)
                 
             else : 
                 print("Pilihan tidak ada!")
