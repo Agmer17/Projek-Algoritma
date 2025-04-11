@@ -15,9 +15,10 @@ def mainMenu(currentUser: Admin | Employee | Supplier) -> None:
     Proses:
     -------
     - Mengecek tipe objek currentUser menggunakan isinstance().
-    - Menampilkan pesan sambutan yang sesuai dengan tipe pengguna.
+    - Menampilkan Menu yang sesuai dengan tipe pengguna.
     - Menu yang ditampilkan bisa dikembangkan lebih lanjut berdasarkan tipe user.
     '''
+    #todo bikin menu buat tiap user, trs panggil fungsi nya dari controller
     if isinstance(currentUser, Admin):
         print("Kamu login sebagai admin!")
     elif isinstance(currentUser, Employee): 
