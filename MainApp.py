@@ -7,5 +7,7 @@ if __name__ == "__main__":
     currentUser = auth.controller.authSection(dataUser);
     print(type(currentUser))
     Dashboard.mainMenu(currentUser)
+    
+    #todo nanti lanjutin aja
 # Nanti kalo ad ayg mau benerin, benerin ae
 # gua masih bingung mau mulai bikin darimana
