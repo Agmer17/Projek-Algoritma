@@ -38,18 +38,17 @@ def signIn(listData:Manage.PersonManager) :
     listUserData.addData(userInput)
 
 def authSection(listData:Manage.PersonManager) : 
-    listUser = listData
-    isLoggedIn = None
+    currentUser = None
     
-    while isLoggedIn == None :
+    while currentUser == None :
         userChoice = None 
         print("Halo! Silahkan Login/Sign in terlebih dahulu")
         print("1. Login\n2.Sign-in")
         try :
             userChoice = int(input("Masukan pilihan : "))
             if userChoice == 1 : 
-                isLoggedIn = login(listData)
-                
+                currentUser = login(listData)
+                return currentUser
             elif userChoice == 2 : 
                 signIn(listData)
                 

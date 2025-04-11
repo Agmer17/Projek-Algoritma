@@ -3,7 +3,7 @@ from src.employees import Employees_schema
 from src.suppliers import Suppliers_schema
 
 import json
-from .Auth_schema import Person
+# from .Auth_schema import Person
 
 class PersonManager : 
     '''
