@@ -83,7 +83,7 @@ class PersonManager :
         try : 
             with open(self.path, mode="w") as files :
                 json.dump(listUserDummy, files, indent=4)
-            print("Data berhasil diubah/ditambahkan!")
+            print("operasi berhasil dilakukan")
         except Exception as e :
             print(e)
     
