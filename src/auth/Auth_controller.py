@@ -1,9 +1,9 @@
 from . import PersonManager as Manage
-from src.Config import dataUser
+# from src.Config import dataUser
 
 #todo perbagus auth section
 
-def login(listData:Manage.PersonManager) :
+def login(listData:Manage.PersonManager) -> object :
     listUserData = listData
     
     print("===LOGIN===")
@@ -23,7 +23,7 @@ def login(listData:Manage.PersonManager) :
         print("username atau password salah")
         return None
 
-def signIn(listData:Manage.PersonManager) : 
+def signIn(listData:Manage.PersonManager) -> None : 
     listUserData = listData
     print("=== Sign In ===")
     
@@ -37,7 +37,7 @@ def signIn(listData:Manage.PersonManager) :
     
     listUserData.addData(userInput)
 
-def authSection(listData:Manage.PersonManager) : 
+def authSection(listData:Manage.PersonManager) -> object : 
     currentUser = None
     
     while currentUser == None :
@@ -46,16 +46,15 @@ def authSection(listData:Manage.PersonManager) :
         print("1. Login\n2.Sign-in")
         try :
             userChoice = int(input("Masukan pilihan : "))
-            if userChoice == 1 : 
+            
+            if userChoice == 1 and len(listData.items) != 0: 
                 currentUser = login(listData)
                 return currentUser
             elif userChoice == 2 : 
                 signIn(listData)
                 
             else : 
-                print("Pilihan tidak ada!")
-        except : 
+                print("Pilihan tidak ada! atau belum ada data user")
+        except Exception as e: 
             print("Input tidak valid! Harap masukan angka 1/2")
-        
-        
-        
+            print(e)

@@ -4,7 +4,6 @@ from src import admin, auth, categories, employees, items, reports, suppliers, t
 
 if __name__ == "__main__":
     dataUser = auth.manage.PersonManager(Config.dataUser)
-    currentUser = auth.controller.authSection(dataUser);
-    print(currentUser.getData())
+    currentUser = auth.controller.authSection(dataUser)
 # Nanti kalo ad ayg mau benerin, benerin ae
 # gua masih bingung mau mulai bikin darimana
