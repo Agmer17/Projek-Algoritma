@@ -88,6 +88,10 @@ class PersonManager :
             print(e)
     
     def findUser(self, username:str) -> object : 
+        
+        # hati hati soalnya ini cuman pass refrensi memory, 
+        # jadi kalo lu ngambil data dari sini trs lu rubah langsung, jadi ilang berubah juga
+        
         return self.items.get(username)
     
     def addData(self, dataUser:dict[str:str]) : 
@@ -149,7 +153,33 @@ class PersonManager :
             self.changeData()
         except Exception as e:
             print(f"Data username tidak ditemukan : {e}")
-            
     
-    #todo nanti refaktor
+    def editUser(self, username:str, keyToChange): 
+        userToEdit = self.findUser(username)
+        
+        if userToEdit != None : 
+        
+            if keyToChange.lower() == "username" : 
+                value = input("Masukan username yang baru : ")
+                userToEdit.changeUsername(value)
+                
+            elif keyToChange.lower() == "nama" : 
+                value = input("Masukan nama yang baru : ")
+                userToEdit.changeName(value)
+                
+            elif keyToChange.lower() == "email" : 
+                value = input("Masukan email yang baru : ")
+                userToEdit.changeEmail(value)
+                
+            elif keyToChange.lower() == "password" : 
+                value = input("Masukan password yang baru : ")
+                userToEdit.changePassword(value)
+            else : 
+                print("Key nya tidak valid!")
+            
+        else : 
+            print("Username tidak ada!")
+            print("Data tidak dirubah!")
+        #todo nanti refaktor
+        
 

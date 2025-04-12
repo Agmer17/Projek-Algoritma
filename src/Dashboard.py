@@ -2,6 +2,8 @@ from src.admin.Admin_schema import Admin
 from src.employees.Employees_schema import Employee
 from src.suppliers.Suppliers_schema import Supplier
 
+#controller 
+from src.admin.Admin_controller import *
 def mainMenu(currentUser: Admin | Employee | Supplier) -> None:
     '''
     Menampilkan menu utama berdasarkan tipe pengguna yang sedang login.
