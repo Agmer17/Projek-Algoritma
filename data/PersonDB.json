@@ -1,10 +1,4 @@
 {
-    "agmer_admin": {
-        "name": "agmer",
-        "email": "agmer@hotmail.com",
-        "password": "12345",
-        "role": "admin"
-    },
     "hiuraAja": {
         "name": "Hiura Mihate",
         "email": "hiura@gmail.com",
@@ -22,5 +16,11 @@
         "email": "supplier1@gmail.com",
         "password": "12345",
         "role": "supplier"
+    },
+    "agmer": {
+        "name": "agmer",
+        "email": "agmer@hotmail.com",
+        "password": "12345",
+        "role": "admin"
     }
 }

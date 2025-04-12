@@ -78,7 +78,9 @@ class PersonManager :
         listUserDummy = {}
         
         for data in self.items : 
+            print(data)
             listUserDummy.update({data : self.findUser(data).getFullData()})
+            print(self.findUser(data))
             print("ini lagi iterasi")
         
         try : 
@@ -155,32 +157,39 @@ class PersonManager :
         except Exception as e:
             print(f"Data username tidak ditemukan : {e}")
     
-    def editUser(self, username:str, keyToChange): 
+    def editUser(self, username: str, keyToChange: str):
         userToEdit = self.findUser(username)
-        
-        if userToEdit != None : 
-        
-            if keyToChange.lower() == "username" : 
-                value = input("Masukan username yang baru : ")
-                userToEdit.changeUsername(value)
-                self.changeData()
-            elif keyToChange.lower() == "nama" : 
-                value = input("Masukan nama yang baru : ")
-                userToEdit.changeName(value)
-                self.changeData()
-            elif keyToChange.lower() == "email" : 
-                value = input("Masukan email yang baru : ")
-                userToEdit.changeEmail(value)
-                self.changeData()
-            elif keyToChange.lower() == "password" : 
-                value = input("Masukan password yang baru : ")
-                userToEdit.changePassword(value)
-                self.changeData()
-            else : 
-                print("Key nya tidak valid!")
-        else : 
+
+        if userToEdit is None:
             print("Username tidak ada!")
             print("Data tidak dirubah!")
-        #todo nanti refaktor
-        
+            return
 
+        keyToChange = keyToChange.lower()
+        value = input(f"Masukan {keyToChange} yang baru: ")
+
+        if keyToChange == "username":
+            # Simpan referensi dulu
+            user_data = self.items.pop(username)
+            user_data.changeUsername(value)
+            self.items[value] = user_data
+            print("Username berhasil diubah!")
+
+        elif keyToChange == "nama":
+            userToEdit.changeName(value)
+            print("Nama berhasil diubah!")
+
+        elif keyToChange == "email":
+            userToEdit.changeEmail(value)
+            print("Email berhasil diubah!")
+
+        elif keyToChange == "password":
+            userToEdit.changePassword(value)
+            print("Password berhasil diubah!")
+
+        else:
+            print("Key nya tidak valid!")
+            return
+
+        # Simpan perubahan ke file JSON
+        self.changeData()
