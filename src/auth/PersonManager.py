@@ -162,7 +162,6 @@ class PersonManager :
             if keyToChange.lower() == "username" : 
                 value = input("Masukan username yang baru : ")
                 userToEdit.changeUsername(value)
-                
             elif keyToChange.lower() == "nama" : 
                 value = input("Masukan nama yang baru : ")
                 userToEdit.changeName(value)
@@ -176,7 +175,7 @@ class PersonManager :
                 userToEdit.changePassword(value)
             else : 
                 print("Key nya tidak valid!")
-            
+            self.changeData()
         else : 
             print("Username tidak ada!")
             print("Data tidak dirubah!")

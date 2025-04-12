@@ -38,9 +38,6 @@ def changeData(dataUser:PersonManager) :
     for data in dataUser.items.values() : 
         print(data.getData())
     username = input("Masukin username yang pengen dirubah : ")
-    
-    keyToChange = input("""Data apa yang mau diganti?
-        Contoh:username ,nama, email, password
-        Masukkan di bawah ini:
-        > """)
+    keyToChange = input("data apa nih yang mau diganti? \nsilahkan masukin (nama, username, email, password)\n>")
     dataUser.editUser(username, keyToChange)
+    #todo nanti benerin ni fungsi

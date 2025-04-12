@@ -9,9 +9,8 @@ if __name__ == "__main__":
     # Dashboard.mainMenu(currentUser)
     
     # admin.Controller.showEmployee(dataUser.items)
-    
-    admin.Controller.changeData(dataUser)
-    admin.Controller.changeData(dataUser)
+    currentUser = auth.controller.authSection(dataUser)
+    Dashboard.mainMenu(currentUser, dataUser=dataUser)
     # admin.Controller.showSupllier(dataUser.items)
     #todo nanti lanjutin aja
 # Nanti kalo ad ayg mau benerin, benerin ae
