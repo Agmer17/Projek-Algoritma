@@ -1,6 +1,6 @@
-from src.employees.Employees_schema import Employee
-from src.suppliers.Suppliers_schema import Supplier
-from src.auth.PersonManager import PersonManager
+from src.Schema.Employees_schema import Employee
+from src.Schema.Suppliers_schema import Supplier
+from src.Manager.PersonManager import PersonManager
 
 
 def getDataByRole(dataUser:PersonManager, type:str="employee") -> list[Employee] | list[Supplier] | None :

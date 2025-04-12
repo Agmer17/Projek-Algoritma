@@ -1,4 +1,4 @@
-from . import PersonManager as Manage
+from src.Manager import PersonManager as Manage
 # from src.Config import dataUser
 
 #todo perbagus auth section

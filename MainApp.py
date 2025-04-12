@@ -1,17 +1,11 @@
-from src import admin, auth, categories, employees, items, reports, suppliers, transactions, Config, Dashboard
+from src import Manager, Config, Controller, Dashboard
 # nanti cara make modul nya gini 
-# <nama_modul/folder>.<controller/schema>.<nama_fungsi>
+# <Controller/Schema>.<tipe>.<func/class>
 
 if __name__ == "__main__":
-    dataUser = auth.manage.PersonManager(Config.dataUser)
-    # currentUser = auth.controller.authSection(dataUser)
-    # print(type(currentUser))
-    # Dashboard.mainMenu(currentUser)
+    dataUser = Manager.UserManager(Config.dataUser)
+    currentUser = Controller.Auth.authSection(dataUser)
+    Dashboard.mainMenu(currentUser, dataUser)
     
-    # admin.Controller.showEmployee(dataUser.items)
-    currentUser = auth.controller.authSection(dataUser)
-    Dashboard.mainMenu(currentUser, dataUser=dataUser)
-    # admin.Controller.showSupllier(dataUser.items)
-    #todo nanti lanjutin aja
 # Nanti kalo ad ayg mau benerin, benerin ae
 # gua masih bingung mau mulai bikin darimana

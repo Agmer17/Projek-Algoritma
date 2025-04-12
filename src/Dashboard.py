@@ -1,9 +1,9 @@
-from src.admin.Admin_schema import Admin
-from src.employees.Employees_schema import Employee
-from src.suppliers.Suppliers_schema import Supplier
+from src.Schema.Admin_schema import Admin
+from src.Schema.Employees_schema import Employee
+from src.Schema.Suppliers_schema import Supplier
 
 #controller 
-from src.admin.Admin_controller import *
+from src.Controller.Admin_controller import *
 
 
 def adminDashboard(admin:Admin, dataUser:PersonManager) :

@@ -1,6 +1,6 @@
-from src.admin import Admin_schema
-from src.employees import Employees_schema
-from src.suppliers import Suppliers_schema
+from src.Schema import AdminSchema
+from src.Schema import EmployeeSchema
+from src.Schema import SupplierSchema
 
 import json
 # from .Auth_schema import Person
@@ -52,11 +52,11 @@ class PersonManager :
         for username, userData in listData.items() : 
             role = userData.get("role").lower()
             if role == "admin":
-                data[username] = Admin_schema.Admin(username=username, **userData)
+                data[username] = AdminSchema(username=username, **userData)
             if role == "employee":
-                data[username] = Employees_schema.Employee(username=username, **userData)
+                data[username] = EmployeeSchema(username=username, **userData)
             if role == "supplier":
-                data[username] = Suppliers_schema.Supplier(username=username, **userData)
+                data[username] = SupplierSchema(username=username, **userData)
             
         
         return data
@@ -79,11 +79,12 @@ class PersonManager :
         
         for data in self.items : 
             listUserDummy.update({data : self.findUser(data).getFullData()})
+            print("ini lagi iterasi")
         
         try : 
             with open(self.path, mode="w") as files :
                 json.dump(listUserDummy, files, indent=4)
-            print("operasi berhasil dilakukan")
+                print("operasi berhasil dilakukan")
         except Exception as e :
             print(e)
     
@@ -113,17 +114,17 @@ class PersonManager :
             role:str = dataUser.get("role").lower()
             
             if role == "admin" :
-                newUsers:Admin_schema.Admin = Admin_schema.Admin(**dataUser)
+                newUsers:AdminSchema = AdminSchema(**dataUser)
                 
                 self.items.update({dataUser.get("username") : newUsers})
             
             elif role == "employee" : 
-                newUsers:Employees_schema.Employee = Employees_schema.Employee(**dataUser)
+                newUsers:EmployeeSchema = EmployeeSchema(**dataUser)
                 
                 self.items.update({dataUser.get("username") : newUsers})
                 
             elif role == "supplier" : 
-                newUsers:Suppliers_schema.Supplier = Suppliers_schema.Supplier(**dataUser)
+                newUsers:SupplierSchema = SupplierSchema(**dataUser)
                 self.items.update({dataUser.get("username") : newUsers})
             
             else : 
@@ -162,20 +163,21 @@ class PersonManager :
             if keyToChange.lower() == "username" : 
                 value = input("Masukan username yang baru : ")
                 userToEdit.changeUsername(value)
+                self.changeData()
             elif keyToChange.lower() == "nama" : 
                 value = input("Masukan nama yang baru : ")
                 userToEdit.changeName(value)
-                
+                self.changeData()
             elif keyToChange.lower() == "email" : 
                 value = input("Masukan email yang baru : ")
                 userToEdit.changeEmail(value)
-                
+                self.changeData()
             elif keyToChange.lower() == "password" : 
                 value = input("Masukan password yang baru : ")
                 userToEdit.changePassword(value)
+                self.changeData()
             else : 
                 print("Key nya tidak valid!")
-            self.changeData()
         else : 
             print("Username tidak ada!")
             print("Data tidak dirubah!")
