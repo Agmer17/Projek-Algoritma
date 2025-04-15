@@ -19,7 +19,7 @@ class Items :
 
     def reduceStock(self, amount):
         if amount > self.stock:
-            raise ValueError("Not enough stock to reduce.")
+            raise ValueError("stock melebihi kapasitas yang ada")
         self.stock -= amount
 
     def getStockValue(self):
@@ -36,10 +36,10 @@ class Items :
 
     def updatePrice(self, newPrice):
         if newPrice < 0:
-            raise ValueError("Price cannot be negative.")
+            raise ValueError("harga tidak boleh negatif")
         self.price = newPrice
 
     def updateSellPrice(self, newSellPrice):
         if newSellPrice < 0:
-            raise ValueError("Sell price cannot be negative.")
+            raise ValueError("harga jual gaboleh negative")
         self.sellPrice = newSellPrice
