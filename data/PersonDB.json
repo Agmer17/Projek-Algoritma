@@ -1,26 +1,26 @@
 {
-    "hiuraAja": {
-        "name": "Hiura Mihate",
-        "email": "hiura@gmail.com",
-        "password": "12345",
-        "role": "employee"
-    },
     "karyawan1": {
         "name": "karyawan",
         "email": "employee@gmail.com",
         "password": "12345",
         "role": "employee"
     },
-    "supplier1": {
-        "name": "dadang",
-        "email": "supplier1@gmail.com",
-        "password": "12345",
-        "role": "supplier"
-    },
     "agmer": {
         "name": "agmer",
         "email": "agmer@hotmail.com",
         "password": "12345",
         "role": "admin"
+    },
+    "dudung": {
+        "name": "dadang",
+        "email": "supplier1@gmail.com",
+        "password": "12345",
+        "role": "supplier"
+    },
+    "hiura_imut": {
+        "name": "hiura mihate",
+        "email": "hiura@gmail.com",
+        "password": "12345",
+        "role": "employee"
     }
 }
