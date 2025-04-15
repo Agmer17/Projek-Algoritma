@@ -1,13 +1,18 @@
 import datetime
 from .Suppliers_schema import Supplier
 class Items :
-    def __init__(self, name:str, category:str, stock:int, price:float, sellPrice:float, desc:str, supplier:Supplier, status:str):
+    def __init__(self, name:str,category:str, stock:int, price:float, sellPrice:float, desc:str, supplier:Supplier, status:str, entrydate:datetime.datetime=datetime.datetime.now()):
         self.name = name
         self.category = category
         self.stock = stock
         self.price = price
         self.sellPrice = sellPrice
-        self.entryDate = datetime.datetime.now()
+        if isinstance(entrydate, str):
+            self.entrydate = datetime.datetime.strptime(entrydate, "%Y-%m-%dT%H:%M:%S.%fZ")
+        elif isinstance(entrydate, datetime.datetime):
+            self.entrydate = entrydate
+        else:
+            self.entrydate = datetime.datetime.now()
         self.desc = desc
         self.supplier = supplier
         self.status = status
@@ -51,7 +56,7 @@ class Items :
             "stock": self.stock,
             "price": self.price,
             "sellPrice": self.sellPrice,
-            "entryDate": self.entryDate.strftime("%Y-%m-%d %H:%M:%S"),
+            "entryDate": self.entrydate.strftime("%Y-%m-%d %H:%M:%S"),
             "desc": self.desc,
             "supplier": self.supplier,
             "status": self.status

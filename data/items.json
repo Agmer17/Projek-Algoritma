@@ -1,0 +1,167 @@
+{
+    "laptop_hp_pavilion_14": {
+        "name": "Laptop HP Pavilion 14",
+        "category": "Elektronik",
+        "stock": 25,
+        "price": 8000000,
+        "sellPrice": 8500000,
+        "entrydate": "2025-04-15T15:03:00.000Z",
+        "desc": "Laptop tipis dan ringan dengan prosesor Intel Core i5 dan RAM 8GB.",
+        "supplier": "PT Jaya Komputer",
+        "status": "aktif"
+    },
+    "kemeja_pria_lengan_panjang": {
+        "name": "Kemeja Pria Lengan Panjang Katun",
+        "category": "Pakaian",
+        "stock": 50,
+        "price": 150000,
+        "sellPrice": 175000,
+        "entrydate": "2025-04-15T15:03:00.000Z",
+        "desc": "Kemeja pria bahan katun berkualitas tinggi, tersedia berbagai ukuran.",
+        "supplier": "CV Mitra Tekstil",
+        "status": "aktif"
+    },
+    "buku_resep_nusantara": {
+        "name": "Buku Resep Masakan Nusantara",
+        "category": "Buku",
+        "stock": 100,
+        "price": 50000,
+        "sellPrice": 60000,
+        "entrydate": "2025-04-15T15:03:00.000Z",
+        "desc": "Kumpulan resep masakan tradisional dari berbagai daerah di Indonesia.",
+        "supplier": "Penerbit Cerdas",
+        "status": "aktif"
+    },
+    "sepatu_sneakers_pria": {
+        "name": "Sepatu Sneakers Pria Casual",
+        "category": "Sepatu",
+        "stock": 30,
+        "price": 350000,
+        "sellPrice": 400000,
+        "entrydate": "2025-04-15T15:03:00.000Z",
+        "desc": "Sepatu sneakers pria desain casual dan nyaman untuk sehari-hari.",
+        "supplier": "PT Sepatu Maju",
+        "status": "aktif"
+    },
+    "meja_kerja_minimalis": {
+        "name": "Meja Kerja Minimalis Kayu",
+        "category": "Furniture",
+        "stock": 15,
+        "price": 600000,
+        "sellPrice": 700000,
+        "entrydate": "2025-04-15T15:03:00.000Z",
+        "desc": "Meja kerja desain minimalis terbuat dari kayu solid.",
+        "supplier": "UD Furniture Indah",
+        "status": "tidak aktif"
+    },
+    "mouse_wireless_logitech": {
+        "name": "Mouse Wireless Logitech M235",
+        "category": "Elektronik",
+        "stock": 40,
+        "price": 120000,
+        "sellPrice": 150000,
+        "entrydate": "2025-03-20T08:40:00.000Z",
+        "desc": "Mouse wireless nyaman dengan koneksi USB dan daya tahan baterai lama.",
+        "supplier": "PT Sentra Komputerindo",
+        "status": "aktif"
+    },
+    "celana_panjang_chino_pria": {
+        "name": "Celana Panjang Chino Pria Slim Fit",
+        "category": "Pakaian",
+        "stock": 60,
+        "price": 200000,
+        "sellPrice": 250000,
+        "entrydate": "2025-04-01T11:15:30.000Z",
+        "desc": "Celana panjang chino pria model slim fit, tersedia berbagai warna.",
+        "supplier": "CV Fashion Modern",
+        "status": "aktif"
+    },
+    "novel_harry_potter_1": {
+        "name": "Harry Potter dan Batu Bertuah",
+        "category": "Buku",
+        "stock": 75,
+        "price": 80000,
+        "sellPrice": 95000,
+        "entrydate": "2025-02-10T13:22:15.000Z",
+        "desc": "Novel fantasi pertama dalam seri Harry Potter karya J.K. Rowling.",
+        "supplier": "Penerbit Fantasia",
+        "status": "aktif"
+    },
+    "sandal_gunung_pria": {
+        "name": "Sandal Gunung Pria Outdoor",
+        "category": "Sepatu",
+        "stock": 20,
+        "price": 250000,
+        "sellPrice": 300000,
+        "entrydate": "2025-03-28T17:01:00.000Z",
+        "desc": "Sandal gunung kuat dan nyaman untuk kegiatan outdoor.",
+        "supplier": "PT Alam Bebas",
+        "status": "aktif"
+    },
+    "rak_buku_minimalis": {
+        "name": "Rak Buku Dinding Minimalis",
+        "category": "Furniture",
+        "stock": 35,
+        "price": 450000,
+        "sellPrice": 550000,
+        "entrydate": "2025-04-05T09:30:45.000Z",
+        "desc": "Rak buku dinding desain minimalis untuk menyimpan buku dan dekorasi.",
+        "supplier": "UD Kayu Kreasi",
+        "status": "aktif"
+    },
+    "keyboard_mekanik_gaming": {
+        "name": "Keyboard Mekanik Gaming RGB",
+        "category": "Elektronik",
+        "stock": 15,
+        "price": 700000,
+        "sellPrice": 800000,
+        "entrydate": "2025-04-10T19:50:00.000Z",
+        "desc": "Keyboard mekanik dengan lampu RGB dan switch yang responsif.",
+        "supplier": "PT Game Master",
+        "status": "aktif"
+    },
+    "jaket_wanita_parka": {
+        "name": "Jaket Wanita Parka Musim Dingin",
+        "category": "Pakaian",
+        "stock": 25,
+        "price": 350000,
+        "sellPrice": 425000,
+        "entrydate": "2025-03-15T12:45:15.000Z",
+        "desc": "Jaket parka wanita tebal dan hangat untuk musim dingin.",
+        "supplier": "CV Winter Fashion",
+        "status": "aktif"
+    },
+    "komik_one_piece_vol_1": {
+        "name": "One Piece Vol. 1",
+        "category": "Buku",
+        "stock": 120,
+        "price": 30000,
+        "sellPrice": 35000,
+        "entrydate": "2025-02-25T16:05:30.000Z",
+        "desc": "Komik manga populer One Piece volume pertama.",
+        "supplier": "Penerbit Shonen Jump",
+        "status": "aktif"
+    },
+    "tas_ransel_laptop": {
+        "name": "Tas Ransel Laptop Anti Air",
+        "category": "Tas",
+        "stock": 50,
+        "price": 280000,
+        "sellPrice": 330000,
+        "entrydate": "2025-04-08T14:30:00.000Z",
+        "desc": "Tas ransel dengan banyak kompartemen dan bahan anti air untuk laptop.",
+        "supplier": "PT Tas Indah",
+        "status": "aktif"
+    },
+    "lampu_meja_belajar_led": {
+        "name": "Lampu Meja Belajar LED",
+        "category": "Lampu",
+        "stock": 65,
+        "price": 180000,
+        "sellPrice": 220000,
+        "entrydate": "2025-03-01T10:10:45.000Z",
+        "desc": "Lampu meja belajar dengan teknologi LED yang hemat energi dan terang.",
+        "supplier": "UD Cahaya Terang",
+        "status": "aktif"
+    }
+}

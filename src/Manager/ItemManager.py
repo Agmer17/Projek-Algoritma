@@ -15,13 +15,17 @@ class ItemManager :
             return {}
     
     @staticmethod
-    def convertFile(listItems:dict[str:dict]) : 
+    def convertFileToClass(listItems:dict[str:dict]) : 
         data = {}
-        for itemsName, itemData in listItems.items() :
-            data.update(itemsName, Items(**itemData))
+        if len(listItems) != 0 :
+            for itemsName, itemData in listItems.items() :
+                data.update({itemsName : Items(**itemData)})
+            
+            return data
+        else : 
+            return data
         
-        return data
     def __init__(self, path):
         self.path = path
         data = self.loadFile(path)
-        self.listData = self.convertFile(data)
+        self.listData = self.convertFileToClass(data)
