@@ -43,3 +43,16 @@ class Items :
         if newSellPrice < 0:
             raise ValueError("harga jual gaboleh negative")
         self.sellPrice = newSellPrice
+    
+    def getAllData(self) :
+        return {
+            "name": self.name,
+            "category": self.category,
+            "stock": self.stock,
+            "price": self.price,
+            "sellPrice": self.sellPrice,
+            "entryDate": self.entryDate.strftime("%Y-%m-%d %H:%M:%S"),
+            "desc": self.desc,
+            "supplier": self.supplier,
+            "status": self.status
+        } 
