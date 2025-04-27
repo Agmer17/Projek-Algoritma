@@ -44,7 +44,7 @@ def mainMenu(currentUser: Admin | Employee | Supplier, dataUser:PersonManager) -
     if isinstance(currentUser, Admin):
         adminDashboard(currentUser,dataUser)
     elif isinstance(currentUser, Employee): 
-        employee.searchItem("r", "")
+        employee.searchItem("buku", "")
         print("Kamu login sebagai karyawan!")
         
     elif isinstance(currentUser, Supplier):
