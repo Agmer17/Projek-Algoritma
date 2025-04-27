@@ -31,7 +31,7 @@ class PersonManager :
                 return data
             
         except Exception as e:
-            print("Error saat membaca file! harap perisa path nya! " + e)
+            print("Error saat membaca file! harap perisa path nya! " + str(e))
             return {}
         
         

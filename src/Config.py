@@ -1,4 +1,13 @@
-dataUser = r"C:\Users\Rizky Agmer\Documents\projek akhir algo\Projek-Algoritma\data\PersonDB.json"
+from pathlib import Path
 
-dataItem = r"C:\Users\Rizky Agmer\Documents\projek akhir algo\Projek-Algoritma\data\items.json"
+# Base path = lokasi file Python ini
+BASE_DIR = Path(__file__).resolve().parent
+
+# Gabungkan path
+dataUser = BASE_DIR / "../data/PersonDB.json"
+dataItem = BASE_DIR / "../data/items.json"
+
+# Resolve supaya path ../ nya dibereskan
+dataUser = dataUser.resolve()
+dataItem = dataItem.resolve()
 
