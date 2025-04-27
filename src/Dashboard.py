@@ -1,15 +1,16 @@
 from src.Schema.Admin_schema import Admin
 from src.Schema.Employees_schema import Employee
 from src.Schema.Suppliers_schema import Supplier
-
+from src.Manager.ItemManager import ItemManager
 #controller 
 from src.Controller.Admin_controller import *
+import src.Controller.Employees_controller as employee
 
 
 def adminDashboard(admin:Admin, dataUser:PersonManager) :
     while True : 
         print(f"Halo admin {admin.name}")
-        print(f"{admin.name} mau ngapain? \n1.lihat data karyawan\n2.lihat data supplier\n 3.Edit data user\n6.keluar")
+        print(f"{admin.name} mau ngapain? \n1.lihat data karyawan\n2.lihat data supplier\n3.Edit data user\n4.Lihat data item\n6.keluar")
         adminChoice = input("Masukan pilihan > ")
         
         match adminChoice : 
@@ -43,7 +44,9 @@ def mainMenu(currentUser: Admin | Employee | Supplier, dataUser:PersonManager) -
     if isinstance(currentUser, Admin):
         adminDashboard(currentUser,dataUser)
     elif isinstance(currentUser, Employee): 
+        employee.searchItem("r", "")
         print("Kamu login sebagai karyawan!")
+        
     elif isinstance(currentUser, Supplier):
         print("Kamu login sebagai supplier!")
 

@@ -3,7 +3,7 @@ from src import Manager, Config, Controller, Dashboard
 # <Controller/Schema/Manager>.<tipe>.<func/class>
 
 if __name__ == "__main__":
-    dataUser = Manager.UserManager(Config.dataUser)
+    dataUser = Manager.UserManager(Config.pathDataUser)
     currentUser = Controller.Auth.authSection(dataUser)
     Dashboard.mainMenu(currentUser, dataUser)
 

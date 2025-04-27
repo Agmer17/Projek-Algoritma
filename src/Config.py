@@ -4,10 +4,10 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 
 # Gabungkan path
-dataUser = BASE_DIR / "../data/PersonDB.json"
-dataItem = BASE_DIR / "../data/items.json"
+pathDataUser = BASE_DIR / "../data/PersonDB.json"
+pathDataItem = BASE_DIR / "../data/items.json"
 
 # Resolve supaya path ../ nya dibereskan
-dataUser = dataUser.resolve()
-dataItem = dataItem.resolve()
+pathDataUser = pathDataUser.resolve()
+pathDataItem = pathDataItem.resolve()
 
