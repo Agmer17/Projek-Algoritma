@@ -1,5 +1,5 @@
-from src.Schema.Employees_schema import Employee
-from src.Schema.Suppliers_schema import Supplier
+from src.Schema.UserSchema import Employee
+from src.Schema.UserSchema import Supplier
 from src.Manager.PersonManager import PersonManager
 
 

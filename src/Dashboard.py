@@ -1,6 +1,6 @@
-from src.Schema.Admin_schema import Admin
-from src.Schema.Employees_schema import Employee
-from src.Schema.Suppliers_schema import Supplier
+from src.Schema.UserSchema import Admin
+from src.Schema.UserSchema import Employee
+from src.Schema.UserSchema import Supplier
 from src.Manager.ItemManager import ItemManager
 #controller 
 from src.Controller.Admin_controller import *
@@ -20,6 +20,8 @@ def adminDashboard(admin:Admin, dataUser:PersonManager) :
                 showSupllier(dataUser)
             case "3" :
                 changeData(dataUser)
+            case "4" : 
+                print("data item")
             case "6" :
                 break
 
@@ -44,7 +46,7 @@ def mainMenu(currentUser: Admin | Employee | Supplier, dataUser:PersonManager) -
     if isinstance(currentUser, Admin):
         adminDashboard(currentUser,dataUser)
     elif isinstance(currentUser, Employee): 
-        employee.searchItem("buku", "")
+        employee.searchItem("l", "")
         print("Kamu login sebagai karyawan!")
         
     elif isinstance(currentUser, Supplier):

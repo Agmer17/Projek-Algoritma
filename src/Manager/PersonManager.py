@@ -1,6 +1,6 @@
-from src.Schema import AdminSchema
-from src.Schema import EmployeeSchema
-from src.Schema import SupplierSchema
+from src.Schema.UserSchema import Admin as AdminSchema
+from src.Schema.UserSchema import Supplier as SupplierSchema
+from src.Schema.UserSchema import Employee as EmployeeSchema
 
 import json
 # from .Auth_schema import Person

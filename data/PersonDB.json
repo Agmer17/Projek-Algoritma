@@ -1,10 +1,4 @@
 {
-    "karyawan1": {
-        "name": "karyawan",
-        "email": "employee@gmail.com",
-        "password": "12345",
-        "role": "employee"
-    },
     "agmer": {
         "name": "agmer",
         "email": "agmer@hotmail.com",
@@ -20,6 +14,12 @@
     "hiura_imut": {
         "name": "hiura mihate",
         "email": "hiura@gmail.com",
+        "password": "12345",
+        "role": "employee"
+    },
+    "karyawan": {
+        "name": "karyawan",
+        "email": "employee@gmail.com",
         "password": "12345",
         "role": "employee"
     }

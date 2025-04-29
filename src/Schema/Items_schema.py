@@ -1,5 +1,5 @@
 import datetime
-from .Suppliers_schema import Supplier
+from src.Schema.UserSchema import Supplier
 class Items :
     def __init__(self, name:str,category:str, stock:int, price:float, sellPrice:float, desc:str, supplier:Supplier, status:str, entrydate:datetime.datetime=datetime.datetime.now()):
         self.name = name

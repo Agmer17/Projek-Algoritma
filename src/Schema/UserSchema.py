@@ -66,4 +66,19 @@ class Person :
         "password": self.password,
         "role": self.role
     }
+        
+
+
+class Supplier(Person) : 
+    
+    def __init__(self, name, username, email, password, role):
+        super().__init__(name, username, email, password, role)
+
+class Admin(Person) :
+    def __init__(self, name, username, email, password, role):
+        super().__init__(name, username, email, password, role)
+
+class Employee(Person) :
+    def __init__(self, name, username, email, password, role):
+        super().__init__(name, username, email, password, role)
 
